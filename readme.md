@@ -1,7 +1,7 @@
 === JSON API User ===
 
 Donate link: <http://www.parorrey.com/solutions/json-api-user-plus/>
-Tags: json api, RESTful user registration, authentication, RESTful Facebook Login, RESTful User Meta and BuddyPress xProfile
+Tags: json api, RESTful user registration, authentication, RESTful Facebook Login, RESTful Google Login, RESTful User Meta and BuddyPress xProfile
 Contributors: parorrey
 Stable tag: 3.0.0
 Requires at least: 3.0.1
@@ -14,7 +14,7 @@ Extends the JSON API Plugin to allow RESTful user registration, authentication a
 
 ==Description==
 
-JSON API User extends the JSON API Plugin with a new Controller to allow RESTful user registration, authentication, password reset, RESTful Facebook Login, RESTful User Meta and BuddyPress xProfile get and update methods. This plugin is for WordPress/Mobile app developers who want to use WordPress as mobile app data backend.
+JSON API User extends the JSON API Plugin with a new Controller to allow RESTful user registration, authentication, password reset, RESTful Facebook Login, RESTful Google Login, RESTful User Meta and BuddyPress xProfile get and update methods. This plugin is for WordPress/Mobile app developers who want to use WordPress as mobile app data backend.
 
 Features include:
 
@@ -22,6 +22,7 @@ Features include:
 -   Validate Auth Cookie
 -   RESTful User Registration
 -   RESTful Facebook Login/Registration with valid access\_token
+-   RESTful Google Login/Registration with valid access\_token
 -   RESTful BuddyPress xProfile fields update
 -   Get User Meta and xProfile fields
 -   Update User Meta and xProfile fields
@@ -270,6 +271,15 @@ It needs valid 'access\_token' var.
 Provide valid access\_token with email extended permission. To generate test access\_token, try this tool <https://developers.facebook.com/tools/explorer/> and select the app from above drop down that you want to get access\_token (You must have joined that app already with email permission to generate access\_token) for and then select email from the fields. By default, only 'id' and 'name' are added but you need to include 'email' for user identification.
 
 You will have to first allow extended permission for email in the app joining screen. Please note that above tool is only for testing, you generate valid access\_token using the Graph API in your app. You should know Facebook Graph API to use this endpoint.
+
+= Method: google\_connect =
+
+It needs valid 'access\_token' var.
+
+<http://localhost/api/user/google_connect/?access_token=ya29.Gls6BxcGqv7WuslYWIke4Qv1Yy2hStP4Icz57I11SEuRQG16gvNcqwinGDuimlr9uTRoYaTqKVdsUQHVi4SMhl88OQgL_gBd1VhJTjGvh_4_k8hztLYmUuewaZg6>
+
+Provide valid access\_token with email permission. 
+
 
 = Method: validate\_auth\_cookie =
 
